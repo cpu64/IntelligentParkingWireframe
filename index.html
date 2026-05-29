@@ -1,0 +1,78 @@
+<!-- ./index.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Smart Truck Parking Platform</title>
+
+    <!--  <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="/tailwind.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </head>
+
+  <body class="bg-slate-950 text-slate-100 h-screen overflow-hidden">
+    <div class="flex flex-col h-full w-full">
+      <!-- HEADER -->
+      <div id="header"></div>
+
+      <main class="flex-1 flex overflow-hidden">
+        <!-- LEFT -->
+        <div class="relative">
+          <aside
+            id="leftSidebar"
+            class="w-[320px] h-full border-r border-slate-800"
+          ></aside>
+
+          <!-- Floating Toggle -->
+          <button
+            id="globalSidebarToggle"
+            class="absolute top-4 -right-3 z-50 w-6 h-12 rounded-md border border-slate-700 bg-slate-900 hover:bg-slate-800 flex items-center justify-center text-slate-400 shadow-lg"
+          >
+            ◀
+          </button>
+        </div>
+
+        <!-- CENTER COLUMN (MAIN + BOTTOM) -->
+        <div class="flex flex-col flex-1 min-h-0 overflow-hidden">
+          <!-- MAIN VIEW -->
+          <section
+            id="mainView"
+            class="flex-1 min-h-0 relative overflow-hidden flex"
+          ></section>
+
+          <!-- BOTTOM BAR (ONLY UNDER MAIN) -->
+          <div
+            id="bottomBar"
+            class="h-24 border-t border-slate-800 hidden"
+          ></div>
+        </div>
+
+        <!-- RIGHT -->
+        <!-- RIGHT -->
+        <div class="relative">
+          <aside
+            id="rightSidebar"
+            class="w-[320px] h-full border-l border-slate-800 hidden"
+          ></aside>
+          <!-- Floating Toggle -->
+          <button
+            id="rightSidebarToggle"
+            class="absolute top-4 -left-3 z-50 w-6 h-12 rounded-md border border-slate-700 bg-slate-900 hover:bg-slate-800 flex items-center justify-center text-slate-400 shadow-lg hidden"
+          >
+            ▶
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <script src="/leaflet.js"></script>
+
+    <script type="module">
+      import { initApp } from "/router.js";
+
+      initApp();
+    </script>
+  </body>
+</html>

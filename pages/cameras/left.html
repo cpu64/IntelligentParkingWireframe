@@ -1,0 +1,560 @@
+<!-- ./pages/cameras/left.html -->
+<!-- LEFT SIDEBAR -->
+<div
+  id="mainLeft"
+  class="w-full h-full border-r border-slate-800 bg-slate-900/80 backdrop-blur flex flex-col z-10 overflow-hidden"
+>
+  <!-- Compact Sidebar Content -->
+  <div class="flex-1 min-h-0 overflow-hidden flex flex-col">
+    <!-- Cameras Section -->
+    <div class="border-b border-slate-800">
+      <button
+        id="toggleCameraSectionButton"
+        class="w-full h-11 px-4 flex items-center justify-between hover:bg-slate-800/50 transition-colors"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="text-xs font-semibold uppercase tracking-[0.15em] text-slate-300"
+            >Cameras</span
+          >
+          <span
+            class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-400"
+            >110</span
+          >
+        </div>
+
+        <svg
+          id="cameraChevron"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-4 h-4 text-slate-500 transition-transform"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+
+      <div id="cameraSection" class="px-3 pb-3">
+        <!-- Camera Search -->
+        <div
+          class="h-9 rounded-lg bg-slate-800 border border-slate-700 flex items-center px-3 gap-2 mb-3"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-3.5 h-3.5 text-slate-500"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+          <span class="text-xs text-slate-500">Search cameras...</span>
+        </div>
+
+        <!-- Compact Camera List -->
+        <div
+          class="max-h-[320px] overflow-y-auto rounded-xl border border-slate-800 bg-slate-950/70"
+        >
+          <div class="divide-y divide-slate-800 text-xs">
+            <button
+              class="w-full h-9 px-3 flex items-center justify-between hover:bg-slate-800/60 transition-colors text-left"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="truncate text-slate-200">Gate Entrance North</span>
+                <span class="text-\[10px\] text-slate-500 whitespace-nowrap"
+                  >[CAM-014]</span
+                >
+              </div>
+              <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+            </button>
+
+            <button
+              class="w-full h-9 px-3 flex items-center justify-between hover:bg-slate-800/60 transition-colors text-left bg-slate-800/40"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="truncate text-white font-medium"
+                  >Truck Row B West</span
+                >
+                <span class="text-[10px] text-slate-500 whitespace-nowrap"
+                  >[CAM-028]</span
+                >
+              </div>
+              <div class="w-2 h-2 rounded-full bg-yellow-400"></div>
+            </button>
+
+            <button
+              class="w-full h-9 px-3 flex items-center justify-between hover:bg-slate-800/60 transition-colors text-left"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="truncate text-slate-200">Perimeter South</span>
+                <span class="text-[10px] text-slate-500 whitespace-nowrap"
+                  >[CAM-103]</span
+                >
+              </div>
+              <div class="w-2 h-2 rounded-full bg-red-400"></div>
+            </button>
+
+            <button
+              class="w-full h-9 px-3 flex items-center justify-between hover:bg-slate-800/60 transition-colors text-left"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="truncate text-slate-200">Gate Exit East</span>
+                <span class="text-[10px] text-slate-500 whitespace-nowrap"
+                  >[CAM-031]</span
+                >
+              </div>
+              <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+            </button>
+
+            <button
+              class="w-full h-9 px-3 flex items-center justify-between hover:bg-slate-800/60 transition-colors text-left"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="truncate text-slate-200">Trailer Zone D3</span>
+                <span class="text-[10px] text-slate-500 whitespace-nowrap"
+                  >[CAM-067]</span
+                >
+              </div>
+              <div class="w-2 h-2 rounded-full bg-cyan-400"></div>
+            </button>
+
+            <button
+              class="w-full h-9 px-3 flex items-center justify-between hover:bg-slate-800/60 transition-colors text-left"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="truncate text-slate-200">Fueling Lane North</span>
+                <span class="text-[10px] text-slate-500 whitespace-nowrap"
+                  >[CAM-055]</span
+                >
+              </div>
+              <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+            </button>
+
+            <div
+              class="px-3 py-3 text-[11px] text-slate-500 text-center border-t border-slate-800"
+            >
+              + 104 more cameras
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Views Section -->
+    <div class="flex-1 overflow-hidden flex flex-col">
+      <div
+        class="w-full h-11 flex items-center justify-between border-b border-slate-800"
+      >
+        <button
+          id="toggleViewSectionButton"
+          class="flex-1 h-full px-4 flex items-center justify-between hover:bg-slate-800/50 transition-colors text-left"
+        >
+          <div class="flex items-center gap-2">
+            <span
+              class="text-xs font-semibold uppercase tracking-[0.15em] text-slate-300"
+              >Views</span
+            >
+            <span
+              class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-400"
+              >8</span
+            >
+          </div>
+
+          <svg
+            id="viewChevron"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4 text-slate-500 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+
+        <div class="pr-4 flex items-center h-full">
+          <button
+            id="openViewManagerBtn"
+            class="h-7 w-[68px] flex items-center justify-center rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[10px] text-slate-300 transition-colors uppercase tracking-wide shrink-0"
+          >
+            Manage
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="viewSection"
+        class="flex-1 overflow-hidden flex flex-col px-3 py-3"
+      >
+        <!-- View Search -->
+        <div
+          class="h-9 rounded-lg bg-slate-800 border border-slate-700 flex items-center px-3 gap-2 mb-3"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-3.5 h-3.5 text-slate-500"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+          <span class="text-xs text-slate-500">Search views...</span>
+        </div>
+
+        <!-- Compact Views List -->
+        <div
+          class="flex-1 overflow-y-auto rounded-xl border border-slate-800 bg-slate-950/70"
+        >
+          <div class="divide-y divide-slate-800 text-xs">
+            <button
+              class="w-full h-10 px-3 flex items-center justify-between hover:bg-slate-800/60 transition-colors text-left bg-cyan-500/10 border-l-2 border-cyan-400"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="truncate text-white font-medium"
+                  >Night Shift Overview</span
+                >
+                <span
+                  class="text-[10px] px-1.5 py-0.5 rounded bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 whitespace-nowrap"
+                  >MON-1</span
+                >
+              </div>
+              <span class="text-[10px] text-cyan-300">12</span>
+            </button>
+
+            <button
+              class="w-full h-10 px-3 flex items-center justify-between hover:bg-slate-800/60 transition-colors text-left"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="truncate text-slate-200">Gate Monitoring</span>
+                <span
+                  class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 whitespace-nowrap"
+                  >MON-3</span
+                >
+              </div>
+              <span class="text-[10px] text-slate-500">6</span>
+            </button>
+
+            <button
+              class="w-full h-10 px-3 flex items-center justify-between hover:bg-slate-800/60 transition-colors text-left"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="truncate text-slate-200">Perimeter Security</span>
+                <span
+                  class="text-[10px] px-1.5 py-0.5 rounded bg-orange-500/10 border border-orange-500/20 text-orange-300 whitespace-nowrap"
+                  >MON-2</span
+                >
+              </div>
+              <span class="text-[10px] text-slate-500">8</span>
+            </button>
+
+            <button
+              class="w-full h-10 px-3 flex items-center justify-between hover:bg-slate-800/60 transition-colors text-left"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="truncate text-slate-200">Truck Assignment</span>
+              </div>
+              <span class="text-[10px] text-slate-500">10</span>
+            </button>
+
+            <button
+              class="w-full h-10 px-3 flex items-center justify-between hover:bg-slate-800/60 transition-colors text-left"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="truncate text-slate-200">High Traffic Zones</span>
+                <span
+                  class="text-[10px] px-1.5 py-0.5 rounded bg-violet-500/10 border border-violet-500/20 text-violet-300 whitespace-nowrap"
+                  >MON-4</span
+                >
+              </div>
+              <span class="text-[10px] text-slate-500">16</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stream Settings -->
+  <div class="border-t border-slate-800 p-4 space-y-3 bg-slate-900/90">
+    <div class="flex items-center justify-between">
+      <div>
+        <div class="text-sm font-medium text-white">Stream Settings</div>
+        <div class="text-[11px] text-slate-500">Current layout preferences</div>
+      </div>
+    </div>
+
+    <div class="space-y-2 text-xs">
+      <div
+        class="flex items-center justify-between rounded-lg bg-slate-800 border border-slate-700 px-3 py-2"
+      >
+        <span class="text-slate-300">AI Bounding Boxes</span>
+        <div class="w-10 h-5 rounded-full bg-cyan-500 relative">
+          <div
+            class="absolute right-1 top-1 w-3 h-3 rounded-full bg-white"
+          ></div>
+        </div>
+      </div>
+
+      <div
+        class="flex items-center justify-between rounded-lg bg-slate-800 border border-slate-700 px-3 py-2"
+      >
+        <span class="text-slate-300">Low-Light Enhancement</span>
+        <div class="w-10 h-5 rounded-full bg-slate-600 relative">
+          <div
+            class="absolute left-1 top-1 w-3 h-3 rounded-full bg-white"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- View Manager Sidebar -->
+<div
+  id="viewManager"
+  class="hidden h-full bg-slate-900/95 backdrop-blur flex-col z-20"
+>
+  <!-- Header -->
+  <div
+    class="h-14 px-4 border-b border-slate-800 flex items-center justify-between"
+  >
+    <div class="flex items-center gap-3">
+      <button
+        id="closeViewManagerBtn"
+        class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 flex items-center justify-center transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-4 h-4 text-slate-300"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+
+      <div>
+        <div class="text-sm font-semibold text-white">View Manager</div>
+        <div class="text-[11px] uppercase tracking-wide text-slate-500">
+          Layout Administration
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="h-9 px-3 rounded-lg bg-cyan-500 text-slate-950 text-xs font-semibold"
+    >
+      New View
+    </button>
+  </div>
+
+  <!-- Search -->
+  <div class="p-4 border-b border-slate-800">
+    <div
+      class="h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center px-3 gap-2"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-4 h-4 text-slate-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z"
+        />
+      </svg>
+      <span class="text-sm text-slate-500">Search views...</span>
+    </div>
+  </div>
+
+  <!-- View Cards -->
+  <div class="flex-1 overflow-y-auto p-3 space-y-3">
+    <!-- View Card -->
+    <div
+      class="rounded-xl border border-cyan-500/20 bg-cyan-500/5 p-3 space-y-3"
+    >
+      <!-- Top Row -->
+      <div class="flex items-start justify-between gap-2">
+        <div class="flex-1 min-w-0">
+          <div
+            class="h-9 rounded-lg bg-slate-900 border border-cyan-500/20 flex items-center px-3"
+          >
+            <span class="text-sm font-medium text-white truncate"
+              >Night Shift Overview</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="px-2 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-[10px] font-semibold whitespace-nowrap"
+        >
+          MON-1
+        </div>
+      </div>
+
+      <!-- Metadata -->
+      <div class="flex items-center justify-between text-xs">
+        <div class="text-slate-400">12 Cameras</div>
+
+        <div class="flex items-center gap-2">
+          <span class="text-[10px] text-slate-500 uppercase tracking-wide"
+            >AI Boxes</span
+          >
+          <div class="w-9 h-5 rounded-full bg-cyan-500 relative">
+            <div
+              class="absolute right-1 top-1 w-3 h-3 rounded-full bg-white"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compact Actions -->
+      <div class="grid grid-cols-3 gap-2 text-[11px]">
+        <button
+          class="h-8 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:opacity-90 transition-opacity"
+        >
+          Save
+        </button>
+
+        <button
+          class="h-8 rounded-lg bg-red-500/10 border border-red-500/20 text-red-200 hover:bg-red-500/20 transition-colors"
+        >
+          Delete
+        </button>
+
+        <button
+          class="h-8 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:bg-slate-700 transition-colors"
+        >
+          Share
+        </button>
+
+        <button
+          class="h-8 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:bg-slate-700 transition-colors"
+        >
+          Snapshot
+        </button>
+
+        <button
+          class="h-8 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:bg-slate-700 transition-colors"
+        >
+          Clip Export
+        </button>
+
+        <button
+          class="h-8 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:bg-slate-700 transition-colors"
+        >
+          View Export
+        </button>
+      </div>
+    </div>
+
+    <!-- Secondary View -->
+    <div class="rounded-xl border border-slate-800 bg-slate-900 p-3 space-y-3">
+      <!-- Top Row -->
+      <div class="flex items-start justify-between gap-2">
+        <div class="flex-1 min-w-0">
+          <div
+            class="h-9 rounded-lg bg-slate-950 border border-slate-800 flex items-center px-3"
+          >
+            <span class="text-sm font-medium text-white truncate"
+              >Perimeter Security</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="px-2 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-400 text-[10px] font-semibold whitespace-nowrap uppercase"
+        >
+          Inactive
+        </div>
+      </div>
+
+      <!-- Metadata -->
+      <div class="flex items-center justify-between text-xs">
+        <div class="text-slate-400">8 Cameras</div>
+
+        <div class="flex items-center gap-2">
+          <span class="text-[10px] text-slate-500 uppercase tracking-wide"
+            >AI Boxes</span
+          >
+          <div class="w-9 h-5 rounded-full bg-slate-700 relative">
+            <div
+              class="absolute left-1 top-1 w-3 h-3 rounded-full bg-white"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compact Actions -->
+      <div class="grid grid-cols-3 gap-2 text-[11px]">
+        <button
+          class="h-8 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:opacity-90 transition-opacity"
+        >
+          Save
+        </button>
+
+        <button
+          class="h-8 rounded-lg bg-red-500/10 border border-red-500/20 text-red-200 hover:bg-red-500/20 transition-colors"
+        >
+          Delete
+        </button>
+
+        <button
+          class="h-8 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:bg-slate-700 transition-colors"
+        >
+          Share
+        </button>
+
+        <button
+          class="h-8 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:bg-slate-700 transition-colors"
+        >
+          Snapshot
+        </button>
+
+        <button
+          class="h-8 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:bg-slate-700 transition-colors"
+        >
+          Clip Export
+        </button>
+
+        <button
+          class="h-8 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:bg-slate-700 transition-colors"
+        >
+          View Export
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<!-- ./pages/map/main.html -->
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<style>
+  .leaflet-container {
+    background: #020617;
+    font-family: sans-serif;
+  }
+
+  .leaflet-popup-content-wrapper {
+    background: #0f172a;
+    color: white;
+    border: 1px solid #334155;
+  }
+
+  .leaflet-popup-tip {
+    background: #0f172a;
+  }
+
+  #mapContextMenu::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  #mapContextMenu::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  #mapContextMenu::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 999px;
+  }
+
+  #mapContextMenu::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+  }
+</style>
+
+<!-- MAP ROOT -->
+
+<div class="flex-1 min-h-0 relative bg-slate-950 overflow-hidden">
+  <!-- Background Grid -->
+
+  <div
+    class="absolute inset-0 opacity-[0.04] pointer-events-none"
+    style="
+      background-image:
+        linear-gradient(to right, white 1px, transparent 1px),
+        linear-gradient(to bottom, white 1px, transparent 1px);
+      background-size: 40px 40px;
+    "
+  ></div>
+
+  <!-- MAP -->
+
+  <div id="map" class="absolute inset-0"></div>
+</div>

@@ -1,0 +1,400 @@
+<!-- ./pages/alerts/main.html -->
+
+<section class="relative flex flex-col h-full bg-slate-950 overflow-hidden">
+  <!-- TOP BAR -->
+  <div
+    class="h-12 border-b border-slate-800 px-6 flex items-center gap-2 shrink-0"
+  >
+    <!-- Search -->
+    <input
+      type="text"
+      placeholder="Search alerts..."
+      class="flex-1 h-8 bg-slate-900 border border-slate-700 rounded px-3 text-xs text-slate-200 placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+    />
+
+    <!-- Filters -->
+    <button
+      id="openAlertsFilterModal"
+      class="h-8 px-3 text-xs border border-slate-700 bg-slate-900 hover:bg-slate-800 rounded text-slate-300"
+    >
+      Filters
+    </button>
+  </div>
+
+  <!-- FILTER MODAL -->
+  <div
+    id="alertsFilterModal"
+    class="absolute top-14 right-3 z-50 w-[420px] bg-slate-900 border border-slate-700 rounded-lg shadow-2xl hidden"
+  >
+    <!-- HEADER -->
+    <div
+      class="h-11 px-4 border-b border-slate-800 flex items-center justify-between"
+    >
+      <div class="text-sm font-medium text-slate-200">Alert Filters</div>
+
+      <button
+        id="closeAlertsFilterModal"
+        class="w-7 h-7 rounded hover:bg-slate-800 text-slate-400"
+      >
+        ✕
+      </button>
+    </div>
+
+    <!-- BODY -->
+    <div class="p-4 grid grid-cols-2 gap-3 text-xs">
+      <!-- Severity -->
+      <div class="space-y-1">
+        <label class="text-slate-400">Severity</label>
+
+        <select
+          class="w-full h-9 bg-slate-950 border border-slate-700 rounded px-2 text-slate-200"
+        >
+          <option>All</option>
+          <option>Informational</option>
+          <option>Warning</option>
+          <option>High</option>
+          <option>Priority</option>
+          <option>Critical</option>
+        </select>
+      </div>
+
+      <!-- Alert Type -->
+      <div class="space-y-1">
+        <label class="text-slate-400">Alert Type</label>
+
+        <select
+          class="w-full h-9 bg-slate-950 border border-slate-700 rounded px-2 text-slate-200"
+        >
+          <option>All</option>
+          <option>Parking violations</option>
+          <option>Capacity warnings</option>
+          <option>Assignment conflicts</option>
+          <option>Idle vehicle alerts</option>
+          <option>Restricted-area access</option>
+          <option>Suspicious behavior</option>
+          <option>Tracking loss</option>
+          <option>AI confidence collapse</option>
+          <option>Camera offline</option>
+          <option>Recording failure</option>
+          <option>Software stack failure</option>
+          <option>Driver assistance requests</option>
+        </select>
+      </div>
+
+      <!-- Time Range -->
+      <div class="space-y-1">
+        <label class="text-slate-400">Time Range</label>
+
+        <select
+          class="w-full h-9 bg-slate-950 border border-slate-700 rounded px-2 text-slate-200"
+        >
+          <option>Last 15 min</option>
+          <option>Last hour</option>
+          <option>Last 6 hours</option>
+          <option>Last 24 hours</option>
+          <option>Last 7 days</option>
+          <option>Custom</option>
+        </select>
+      </div>
+
+      <!-- Shift -->
+      <div class="space-y-1">
+        <label class="text-slate-400">Shift</label>
+
+        <select
+          class="w-full h-9 bg-slate-950 border border-slate-700 rounded px-2 text-slate-200"
+        >
+          <option>All</option>
+          <option>Morning</option>
+          <option>Afternoon</option>
+          <option>Night</option>
+        </select>
+      </div>
+
+      <!-- Zone -->
+      <div class="space-y-1">
+        <label class="text-slate-400">Zone</label>
+
+        <input
+          type="text"
+          placeholder="Sector / Zone"
+          class="w-full h-9 bg-slate-950 border border-slate-700 rounded px-2 text-slate-200"
+        />
+      </div>
+
+      <!-- Camera -->
+      <div class="space-y-1">
+        <label class="text-slate-400">Camera</label>
+
+        <input
+          type="text"
+          placeholder="Camera ID"
+          class="w-full h-9 bg-slate-950 border border-slate-700 rounded px-2 text-slate-200"
+        />
+      </div>
+
+      <!-- Truck -->
+      <div class="space-y-1">
+        <label class="text-slate-400">Truck</label>
+
+        <input
+          type="text"
+          placeholder="Truck ID"
+          class="w-full h-9 bg-slate-950 border border-slate-700 rounded px-2 text-slate-200"
+        />
+      </div>
+
+      <!-- Driver -->
+      <div class="space-y-1">
+        <label class="text-slate-400">Driver</label>
+
+        <input
+          type="text"
+          placeholder="Driver name"
+          class="w-full h-9 bg-slate-950 border border-slate-700 rounded px-2 text-slate-200"
+        />
+      </div>
+
+      <!-- Parking -->
+      <div class="space-y-1">
+        <label class="text-slate-400">Parking Space</label>
+
+        <input
+          type="text"
+          placeholder="Parking ID"
+          class="w-full h-9 bg-slate-950 border border-slate-700 rounded px-2 text-slate-200"
+        />
+      </div>
+
+      <!-- Alert State -->
+      <div class="space-y-1">
+        <label class="text-slate-400">Alert State</label>
+
+        <select
+          class="w-full h-9 bg-slate-950 border border-slate-700 rounded px-2 text-slate-200"
+        >
+          <option>All</option>
+          <option>Active</option>
+          <option>Acknowledged</option>
+          <option>Assigned</option>
+          <option>Escalated</option>
+          <option>Muted</option>
+          <option>Resolved</option>
+        </select>
+      </div>
+
+      <!-- Assigned Operator -->
+      <div class="space-y-1">
+        <label class="text-slate-400">Assigned Operator</label>
+
+        <input
+          type="text"
+          placeholder="Operator ID"
+          class="w-full h-9 bg-slate-950 border border-slate-700 rounded px-2 text-slate-200"
+        />
+      </div>
+
+      <!-- Escalation -->
+      <div class="space-y-1">
+        <label class="text-slate-400">Escalation State</label>
+
+        <select
+          class="w-full h-9 bg-slate-950 border border-slate-700 rounded px-2 text-slate-200"
+        >
+          <option>All</option>
+          <option>Tier 1</option>
+          <option>Tier 2</option>
+          <option>Tier 3</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div
+      class="h-14 px-4 border-t border-slate-800 flex items-center justify-end gap-2"
+    >
+      <button
+        id="openAlertsFilterModal"
+        class="h-8 px-3 text-xs border border-slate-700 bg-slate-900 hover:bg-slate-800 rounded text-slate-300"
+      >
+        Filters
+      </button>
+    </div>
+  </div>
+
+  <!-- TABLE -->
+  <div class="flex-1 overflow-auto px-6">
+    <table class="w-full text-[11px] text-left border-collapse">
+      <!-- HEADER -->
+      <thead
+        class="sticky top-0 z-10 bg-slate-900 border-b border-slate-700 text-slate-400 uppercase tracking-wide"
+      >
+        <tr class="hover:bg-slate-900/60 cursor-pointer">
+          <th class="px-3 py-2 font-medium whitespace-nowrap">Severity</th>
+
+          <th class="px-3 py-2 font-medium whitespace-nowrap">Type</th>
+
+          <th class="px-3 py-2 font-medium whitespace-nowrap">Timestamp</th>
+
+          <th class="px-3 py-2 font-medium whitespace-nowrap">Location</th>
+
+          <th class="px-3 py-2 font-medium whitespace-nowrap">Cameras</th>
+
+          <th class="px-3 py-2 font-medium whitespace-nowrap">Truck</th>
+
+          <th class="px-3 py-2 font-medium whitespace-nowrap">Driver</th>
+
+          <th class="px-3 py-2 font-medium whitespace-nowrap">Parking</th>
+
+          <th class="px-3 py-2 font-medium whitespace-nowrap">State</th>
+
+          <th class="px-3 py-2 font-medium whitespace-nowrap">Operator</th>
+
+          <th class="px-3 py-2 font-medium whitespace-nowrap">Shift Notes</th>
+        </tr>
+      </thead>
+
+      <!-- BODY -->
+      <tbody class="divide-y divide-slate-800">
+        <!-- ROW -->
+        <tr data-alert-row="true" class="hover:bg-slate-900/60 cursor-pointer">
+          <td class="px-3 py-2 whitespace-nowrap">
+            <span
+              class="px-1.5 py-0.5 rounded bg-red-500/20 text-red-400 border border-red-500/30 font-medium"
+            >
+              CRITICAL
+            </span>
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-200">
+            Restricted-area access
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-400">
+            2026-05-29 14:22:31
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-300">
+            Sector B / Gate 4
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-400">
+            CAM-12, CAM-18
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-300">TRK-204</td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-300">
+            John Peterson
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-300">P-12</td>
+
+          <td class="px-3 py-2 whitespace-nowrap">
+            <span
+              class="px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20"
+            >
+              Escalated
+            </span>
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-300">OP-14</td>
+
+          <td class="px-3 py-2 min-w-[260px] text-slate-500">
+            Vehicle remained in restricted corridor for 18 minutes.
+          </td>
+        </tr>
+
+        <!-- ROW -->
+        <tr class="hover:bg-slate-900/60 cursor-pointer">
+          <td class="px-3 py-2 whitespace-nowrap">
+            <span
+              class="px-1.5 py-0.5 rounded bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 font-medium"
+            >
+              WARNING
+            </span>
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-200">
+            Capacity warning
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-400">
+            2026-05-29 14:16:02
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-300">North Yard</td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-400">
+            CAM-02, CAM-05
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-500">—</td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-500">—</td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-300">N-01</td>
+
+          <td class="px-3 py-2 whitespace-nowrap">
+            <span
+              class="px-1.5 py-0.5 rounded bg-green-500/10 text-green-300 border border-green-500/20"
+            >
+              Active
+            </span>
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-300">OP-03</td>
+
+          <td class="px-3 py-2 text-slate-500">Occupancy reached 94%.</td>
+        </tr>
+
+        <!-- ROW -->
+        <tr class="hover:bg-slate-900/60 cursor-pointer">
+          <td class="px-3 py-2 whitespace-nowrap">
+            <span
+              class="px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30 font-medium"
+            >
+              INFO
+            </span>
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-200">
+            Driver assistance request
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-400">
+            2026-05-29 14:11:45
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-300">
+            East Checkpoint
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-400">CAM-21</td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-300">TRK-881</td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-300">
+            Sarah Collins
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-500">—</td>
+
+          <td class="px-3 py-2 whitespace-nowrap">
+            <span
+              class="px-1.5 py-0.5 rounded bg-slate-700 text-slate-300 border border-slate-600"
+            >
+              Ack
+            </span>
+          </td>
+
+          <td class="px-3 py-2 whitespace-nowrap text-slate-300">OP-08</td>
+
+          <td class="px-3 py-2 text-slate-500">
+            Driver requested docking guidance.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,170 @@
+<!-- ./pages/alerts/right.html -->
+<!-- ./pages/alerts/right.html -->
+
+<section class="flex flex-col h-full bg-slate-950">
+  <!-- HEADER -->
+  <div
+    class="h-12 px-4 border-b border-slate-800 flex items-center justify-between shrink-0"
+  >
+    <div>
+      <div class="text-sm font-medium text-slate-200">Alert Controls</div>
+
+      <div class="text-[11px] text-slate-500">Notifications & automation</div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="flex-1 overflow-auto p-4 space-y-5 text-xs">
+    <!-- CREATE ALERT -->
+    <div class="space-y-3">
+      <div class="text-[11px] uppercase tracking-wide text-slate-500">
+        Create Alert
+      </div>
+
+      <select
+        class="w-full h-9 bg-slate-900 border border-slate-700 rounded px-2 text-slate-200"
+      >
+        <option>Select alert type</option>
+        <option>Parking violations</option>
+        <option>Capacity warnings</option>
+        <option>Assignment conflicts</option>
+        <option>Idle vehicle alerts</option>
+        <option>Restricted-area access</option>
+        <option>Suspicious behavior</option>
+        <option>Tracking loss</option>
+        <option>AI confidence collapse</option>
+        <option>Camera offline</option>
+        <option>Recording failure</option>
+        <option>Software stack failure</option>
+        <option>Driver assistance requests</option>
+      </select>
+
+      <textarea
+        rows="4"
+        placeholder="Alert description..."
+        class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-slate-200 resize-none"
+      ></textarea>
+
+      <button
+        class="w-full h-9 rounded bg-cyan-600 hover:bg-cyan-500 text-white"
+      >
+        Create Alert
+      </button>
+    </div>
+
+    <!-- QUICK ACTIONS -->
+    <div class="space-y-3">
+      <div class="text-[11px] uppercase tracking-wide text-slate-500">
+        Quick Actions
+      </div>
+
+      <div class="grid grid-cols-2 gap-2">
+        <button
+          class="h-9 rounded border border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-300"
+        >
+          Snooze Alerts
+        </button>
+
+        <button
+          class="h-9 rounded border border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-300"
+        >
+          Mute Alerts
+        </button>
+      </div>
+    </div>
+
+    <!-- PER CATEGORY MUTING -->
+    <div class="space-y-3">
+      <div class="text-[11px] uppercase tracking-wide text-slate-500">
+        Per-Category Muting
+      </div>
+
+      <div class="space-y-2">
+        <!-- ITEM -->
+        <label
+          class="flex items-center justify-between px-3 py-2 rounded border border-slate-800 bg-slate-900"
+        >
+          <span class="text-slate-300"> Parking violations </span>
+
+          <input type="checkbox" class="accent-cyan-500" />
+        </label>
+
+        <!-- ITEM -->
+        <label
+          class="flex items-center justify-between px-3 py-2 rounded border border-slate-800 bg-slate-900"
+        >
+          <span class="text-slate-300"> Capacity warnings </span>
+
+          <input type="checkbox" class="accent-cyan-500" checked />
+        </label>
+
+        <!-- ITEM -->
+        <label
+          class="flex items-center justify-between px-3 py-2 rounded border border-slate-800 bg-slate-900"
+        >
+          <span class="text-slate-300"> Camera offline </span>
+
+          <input type="checkbox" class="accent-cyan-500" />
+        </label>
+
+        <!-- ITEM -->
+        <label
+          class="flex items-center justify-between px-3 py-2 rounded border border-slate-800 bg-slate-900"
+        >
+          <span class="text-slate-300"> Driver assistance requests </span>
+
+          <input type="checkbox" class="accent-cyan-500" checked />
+        </label>
+      </div>
+    </div>
+
+    <!-- NOTIFICATION FILTERS -->
+    <div class="space-y-3">
+      <div class="text-[11px] uppercase tracking-wide text-slate-500">
+        Notification Filters
+      </div>
+
+      <div class="space-y-2">
+        <input
+          type="text"
+          placeholder="Zone"
+          class="w-full h-9 bg-slate-900 border border-slate-700 rounded px-2 text-slate-200"
+        />
+
+        <input
+          type="text"
+          placeholder="Camera"
+          class="w-full h-9 bg-slate-900 border border-slate-700 rounded px-2 text-slate-200"
+        />
+
+        <input
+          type="text"
+          placeholder="Operator"
+          class="w-full h-9 bg-slate-900 border border-slate-700 rounded px-2 text-slate-200"
+        />
+      </div>
+    </div>
+
+    <!-- SEVERITY THRESHOLD -->
+    <div class="space-y-3">
+      <div class="text-[11px] uppercase tracking-wide text-slate-500">
+        Notification Severity Threshold
+      </div>
+
+      <select
+        class="w-full h-9 bg-slate-900 border border-slate-700 rounded px-2 text-slate-200"
+      >
+        <option>Informational</option>
+        <option>Warning</option>
+        <option>High</option>
+        <option selected>Priority</option>
+        <option>Critical</option>
+      </select>
+
+      <div class="text-[11px] text-slate-500 leading-relaxed">
+        Only alerts at or above the selected severity will trigger
+        notifications.
+      </div>
+    </div>
+  </div>
+</section>

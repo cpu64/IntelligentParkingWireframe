@@ -1,0 +1,148 @@
+<!-- ./pages/map/bottom.html -->
+<div
+  id="timelineRail"
+  class="shrink-0 border-t border-slate-800 bg-slate-950 backdrop-blur z-20 flex items-stretch"
+>
+  <!-- Timeline Controls -->
+  <div
+    class="w-[420px] border-r border-slate-800 px-4 flex items-center gap-2 overflow-x-auto"
+  >
+    <button
+      class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 flex items-center justify-center text-slate-300 transition-colors"
+      title="Jump To Alert"
+    >
+      ⚠
+    </button>
+
+    <button
+      class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 flex items-center justify-center text-slate-300 transition-colors"
+      title="Jump To Bookmark"
+    >
+      ★
+    </button>
+
+    <button
+      class="w-9 h-9 rounded-lg bg-cyan-500 hover:opacity-90 flex items-center justify-center text-slate-950 text-sm leading-none transition-opacity"
+      title="Play/Pause"
+    >
+      <span class="translate-x-[1px]">▶</span>
+    </button>
+
+    <button
+      class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 flex items-center justify-center text-slate-300 transition-colors"
+      title="Rewind 10 Seconds"
+    >
+      ⏪
+    </button>
+
+    <button
+      class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 flex items-center justify-center text-slate-300 transition-colors"
+      title="Fast Forward 10 Seconds"
+    >
+      ⏩
+    </button>
+
+    <button
+      class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 flex items-center justify-center text-slate-300 transition-colors"
+      title="Frame Step Backward"
+    >
+      ◀|
+    </button>
+
+    <button
+      class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 flex items-center justify-center text-slate-300 transition-colors"
+      title="Frame Step Forward"
+    >
+      |▶
+    </button>
+
+    <button
+      class="h-9 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 flex items-center justify-center text-xs text-slate-300 transition-colors whitespace-nowrap"
+      title="Playback Speed"
+    >
+      1x
+    </button>
+
+    <button
+      class="w-9 h-9 rounded-lg bg-yellow-500/10 hover:bg-yellow-500/20 border border-yellow-500/20 flex items-center justify-center text-yellow-300 transition-colors"
+      title="Create Bookmark"
+    >
+      +★
+    </button>
+  </div>
+
+  <!-- Timeline Area -->
+  <div class="flex-1 relative overflow-hidden px-6 py-4">
+    <!-- Time Labels -->
+    <div
+      class="flex items-center justify-between text-[10px] text-slate-500 mb-3 select-none"
+    >
+      <span>18:00</span>
+      <span>18:15</span>
+      <span>18:30</span>
+      <span>18:45</span>
+      <span>19:00</span>
+      <span>19:15</span>
+      <span>19:30</span>
+      <span>19:45</span>
+      <span>20:00</span>
+    </div>
+
+    <!-- Timeline Track -->
+    <div
+      class="relative h-10 rounded-xl bg-slate-950 border border-slate-800 overflow-hidden"
+    >
+      <!-- Grid -->
+      <div class="absolute inset-0 flex justify-between px-2 opacity-40">
+        <div class="w-px bg-slate-800"></div>
+        <div class="w-px bg-slate-800"></div>
+        <div class="w-px bg-slate-800"></div>
+        <div class="w-px bg-slate-800"></div>
+        <div class="w-px bg-slate-800"></div>
+        <div class="w-px bg-slate-800"></div>
+        <div class="w-px bg-slate-800"></div>
+        <div class="w-px bg-slate-800"></div>
+      </div>
+
+      <!-- Alert Markers -->
+      <div
+        class="absolute left-[18%] top-1/2 -translate-y-1/2 w-2 h-6 rounded-full bg-red-400 shadow-[0_0_12px_rgba(248,113,113,0.7)]"
+      ></div>
+      <div
+        class="absolute left-[42%] top-1/2 -translate-y-1/2 w-2 h-6 rounded-full bg-orange-400 shadow-[0_0_12px_rgba(251,146,60,0.7)]"
+      ></div>
+      <div
+        class="absolute left-[76%] top-1/2 -translate-y-1/2 w-2 h-6 rounded-full bg-yellow-400 shadow-[0_0_12px_rgba(250,204,21,0.7)]"
+      ></div>
+
+      <!-- Bookmark Markers -->
+      <div
+        class="absolute left-[30%] top-1/2 -translate-y-1/2 text-cyan-300 text-sm"
+      >
+        ★
+      </div>
+      <div
+        class="absolute left-[63%] top-1/2 -translate-y-1/2 text-cyan-300 text-sm"
+      >
+        ★
+      </div>
+
+      <!-- Playhead -->
+      <div
+        class="absolute left-[54%] top-0 bottom-0 w-[2px] bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.9)] cursor-ew-resize"
+      >
+        <div
+          class="absolute -top-1 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-400 border-2 border-slate-950"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Timeline Hint -->
+    <div
+      class="flex items-center justify-between mt-2 text-[10px] text-slate-600 select-none"
+    >
+      <span>Scroll to zoom timeline</span>
+      <span>Playback Mode • Synced Cameras</span>
+    </div>
+  </div>
+</div>
