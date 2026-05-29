@@ -87,7 +87,7 @@ async function loadPage(page) {
 }
 
 async function initApp() {
-  await loadComponent("#header", "/header.html");
+  await loadComponent("#header", "./header.html");
 
   await loadPage("map");
 
