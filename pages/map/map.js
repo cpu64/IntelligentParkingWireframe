@@ -30,7 +30,7 @@ export async function init() {
     [height, width],
   ];
 
-  L.imageOverlay("/map.svg", bounds).addTo(map);
+  L.imageOverlay("./map.svg", bounds).addTo(map);
 
   map.fitBounds(bounds);
 
