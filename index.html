@@ -8,7 +8,7 @@
     <title>Smart Truck Parking Platform</title>
 
     <!--  <script src="https://cdn.tailwindcss.com"></script> -->
-    <script src="tailwind.js"></script>
+    <script src="./tailwind.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   </head>
 
@@ -54,7 +54,7 @@
         <div class="relative">
           <aside
             id="rightSidebar"
-            class="w-[320px] h-full border-l border-slate-800 hidden"
+            class="w-[320px] h-full border-l border-slate-800"
           ></aside>
           <!-- Floating Toggle -->
           <button
@@ -67,10 +67,10 @@
       </main>
     </div>
 
-    <script src="leaflet.js"></script>
+    <script src="./leaflet.js"></script>
 
     <script type="module">
-      import { initApp } from "/router.js";
+      import { initApp } from "./router.js";
 
       initApp();
     </script>
