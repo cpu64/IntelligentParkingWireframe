@@ -4,35 +4,35 @@ let currentModule = null;
 
 const PAGES = {
   live: {
-    left: "./pages/cameras/left.html",
-    main: "./pages/cameras/main.html",
+    left: "./IntelligentParkingWireframe/pages/cameras/left.html",
+    main: "./IntelligentParkingWireframe/pages/cameras/main.html",
     right: null,
     bottom: null,
-    script: "./pages/cameras/cameras.js",
+    script: "./IntelligentParkingWireframe/pages/cameras/cameras.js",
   },
 
   replay: {
-    left: "./pages/cameras/left.html",
-    main: "./pages/cameras/main.html",
+    left: "./IntelligentParkingWireframe/pages/cameras/left.html",
+    main: "./IntelligentParkingWireframe/pages/cameras/main.html",
     right: null,
-    bottom: "./pages/cameras/replay/bottom.html",
-    script: "./pages/cameras/cameras.js",
+    bottom: "./IntelligentParkingWireframe/pages/cameras/replay/bottom.html",
+    script: "./IntelligentParkingWireframe/pages/cameras/cameras.js",
   },
 
   map: {
-    left: "./pages/map/left.html",
-    main: "./pages/map/main.html",
+    left: "./IntelligentParkingWireframe/pages/map/left.html",
+    main: "./IntelligentParkingWireframe/pages/map/main.html",
     right: null,
-    bottom: "./pages/map/bottom.html",
-    script: "./pages/map/map.js",
+    bottom: "./IntelligentParkingWireframe/pages/map/bottom.html",
+    script: "./IntelligentParkingWireframe/pages/map/map.js",
   },
 
   alerts: {
-    left: "./pages/alerts/left.html",
-    main: "./pages/alerts/main.html",
-    right: "./pages/alerts/right.html",
+    left: "./IntelligentParkingWireframe/pages/alerts/left.html",
+    main: "./IntelligentParkingWireframe/pages/alerts/main.html",
+    right: "./IntelligentParkingWireframe/pages/alerts/right.html",
     bottom: null,
-    script: "./pages/alerts/alerts.js",
+    script: "./IntelligentParkingWireframe/pages/alerts/alerts.js",
   },
 };
 
